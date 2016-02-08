@@ -6,23 +6,23 @@ var box = document.getElementById('display'),
     newnumber,
     z = 0;
 
-function addtoscreen(x) {
+function addToScreen(x) {
     box.value += x;
     if (x === 'C') {
-            box.value = '';
+      box.value = '';
     }
 }
 
-function addtoscreenx(x) {
+function addToScreenX(x) {
     if ((box.value.charAt(box.value.length - 1)) >= 0) {
-            box.value += x;
-            z = 0;
+      box.value += x;
+      z = 0;
     }
 }
 
 function answer() {
     x = box.value;
-    x = eval(x);
+    x = window.eval(x);
     box.value = x;
     z = 0;
 }
@@ -36,7 +36,7 @@ function backspace() {
 
 function pick(x) {
     if (z === 0) {
-        box.value += x;
-        z = 1;
+      box.value += x;
+      z = 1;
     }
 }
